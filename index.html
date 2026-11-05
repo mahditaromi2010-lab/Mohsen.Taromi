@@ -123,6 +123,57 @@
   footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
   footer a{color:var(--ink);font-weight:700}
 
+
+  /* Top nav */
+  .topnav{display:flex;justify-content:flex-end;gap:18px;margin:-30px 0 22px;font-weight:700;font-size:15px}
+  .topnav a{color:#fff;text-decoration:none;opacity:.85}
+  .topnav a:hover{opacity:1;text-decoration:underline}
+
+  /* Route comparison */
+  .routes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .country{background:var(--panel);border-radius:8px;padding:22px 24px}
+  .country h3{margin:0 0 14px;font-size:19px;font-weight:800}
+  .leg{margin:0 0 14px}
+  .leg:last-child{margin-bottom:0}
+  .leg-name{display:flex;justify-content:space-between;gap:12px;font-weight:600;font-size:15px}
+  .leg-name span{color:var(--soft);font-weight:400;white-space:nowrap}
+  .bar{height:12px;border-radius:6px;background:var(--rule);margin-top:6px;position:relative;overflow:hidden}
+  .bar i{position:absolute;inset:0 auto 0 0;border-radius:6px;
+    background:repeating-linear-gradient(90deg,var(--ink) 0 18px,#3a4046 18px 22px)}
+  .country.au .bar i{background:repeating-linear-gradient(90deg,var(--sign) 0 18px,#0f8048 18px 22px)}
+  @media (prefers-color-scheme: dark){.bar i{background:repeating-linear-gradient(90deg,#c9cdd1 0 18px,#9aa0a6 18px 22px)}}
+  .climate{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+  .climate div{background:var(--panel);border-radius:8px;padding:16px 18px}
+  .climate b{display:block;font-size:17px;font-weight:800;margin-bottom:4px}
+  .climate p{margin:0;color:var(--soft);font-size:15px}
+  .fine{font-size:14px;color:var(--soft);margin-top:12px}
+
+  /* Readiness tracker */
+  .tracker{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
+  .tracker li{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.08);
+    border:2px solid rgba(255,255,255,.25);border-radius:8px;padding:12px 16px}
+  .tracker .tick{flex:none;width:26px;height:26px;border-radius:50%;border:3px solid #fff;
+    display:grid;place-items:center}
+  .tracker .state{margin-left:auto;font-size:14px;font-weight:700;opacity:.85;white-space:nowrap}
+  .tracker li.done{background:#fff;color:var(--sign);border-color:#fff}
+  .tracker li.done .tick{background:var(--sign);border-color:var(--sign)}
+  .tracker li.done .tick::after{content:"";width:10px;height:6px;border:solid #fff;border-width:0 0 3px 3px;
+    transform:translateY(-1px) rotate(-45deg)}
+  .tracker li.doing .tick{border-color:var(--line);border-style:dashed}
+  .meter{height:10px;background:rgba(255,255,255,.2);border-radius:5px;margin-top:18px;overflow:hidden}
+  .meter i{display:block;height:100%;background:var(--line);border-radius:5px}
+
+  .docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;list-style:none;padding:0;margin:0}
+  .docs li{background:var(--panel);border-radius:8px;padding:14px 18px;border-left:6px solid var(--line)}
+  .docs b{display:block}
+  .docs span{color:var(--soft);font-size:15px}
+
+  @media (max-width:720px){
+    .routes{grid-template-columns:1fr}
+    .climate{grid-template-columns:1fr}
+    .topnav{margin:0 0 18px;justify-content:flex-start}
+  }
+
   @media (max-width:720px){
     .about,.two{grid-template-columns:1fr}
     .sign-inner{padding:22px 18px}
@@ -135,6 +186,10 @@
 
 <header class="hero">
   <div class="wrap">
+    <nav class="topnav" aria-label="Site">
+      <a href="employers.html">For employers</a>
+      <a href="Mohsen_Emamdadi_Taromi_CV.pdf" download>Download CV (PDF)</a>
+    </nav>
     <div class="sign" role="img" aria-label="Highway sign showing Mohsen's name and the regions he wants to work in">
       <div class="sign-inner">
         <h1>Mohsen Emamdadi Taromi</h1>
@@ -158,6 +213,7 @@
     <div class="hero-actions">
       <a class="btn btn-main" href="mailto:mohsen.taromi.d@gmail.com?subject=Heavy%20vehicle%20driver%20-%20Mohsen%20Emamdadi%20Taromi">Email Mohsen</a>
       <a class="btn btn-alt" href="tel:+989171598828">Call +98 917 159 8828</a>
+      <a class="btn btn-alt" href="Mohsen_Emamdadi_Taromi_CV.pdf" download>Download CV</a>
     </div>
   </div>
 </header>
@@ -177,6 +233,32 @@
       <div class="fact"><b>Clean record</b><span>driving record</span></div>
       <div class="fact"><b>Mechanic</b><span>vocational certificate, petrol engines</span></div>
     </div>
+  </section>
+
+
+  <section aria-labelledby="routes-h">
+    <h2 id="routes-h">From Bandar Abbas to Darwin</h2>
+    <p class="lede">The roads I know already look a lot like the work in northern and western Australia: long distances between towns, desert country and serious heat.</p>
+    <div class="routes">
+      <div class="country">
+        <h3>Long-haul in Iran</h3>
+        <div class="leg"><div class="leg-name">Bandar Abbas to Tehran <span>about 1,300 km</span></div><div class="bar"><i style="width:87%"></i></div></div>
+        <div class="leg"><div class="leg-name">Bandar Abbas to Shiraz <span>about 600 km</span></div><div class="bar"><i style="width:40%"></i></div></div>
+        <div class="leg"><div class="leg-name">Shiraz to Tehran <span>about 930 km</span></div><div class="bar"><i style="width:62%"></i></div></div>
+      </div>
+      <div class="country au">
+        <h3>Similar runs in Australia</h3>
+        <div class="leg"><div class="leg-name">Darwin to Alice Springs <span>about 1,500 km</span></div><div class="bar"><i style="width:100%"></i></div></div>
+        <div class="leg"><div class="leg-name">Perth to Kalgoorlie <span>about 600 km</span></div><div class="bar"><i style="width:40%"></i></div></div>
+        <div class="leg"><div class="leg-name">Darwin to Katherine <span>about 320 km</span></div><div class="bar"><i style="width:21%"></i></div></div>
+      </div>
+    </div>
+    <div class="climate">
+      <div><b>Heat and humidity</b><p>I worked for years out of Bandar Abbas on the Persian Gulf, where summer days pass 40 °C with heavy humidity, much like the Top End build-up.</p></div>
+      <div><b>Desert roads</b><p>Long stretches through southern Iran with few towns, fuel stops planned in advance and no help close by.</p></div>
+      <div><b>Fixing it myself</b><p>As a trained mechanic I can deal with basic faults on remote roads instead of waiting hours for help.</p></div>
+    </div>
+    <p class="fine">Distances are approximate road distances.</p>
   </section>
 
   <section aria-labelledby="exp-h">
@@ -241,14 +323,27 @@
   </section>
 
   <section class="plan" aria-labelledby="plan-h">
-    <h2 id="plan-h">What I will do to start work</h2>
-    <p>Steps I will complete for any employer who offers sponsorship.</p>
-    <ol>
-      <li>Pass the IELTS level the visa needs</li>
-      <li>Renew my dangerous goods certificate</li>
-      <li>Convert my licence and pass the Australian heavy vehicle assessment</li>
-      <li>Get a White Card, any site tickets and the required medical</li>
+    <h2 id="plan-h">Getting ready to start work</h2>
+    <p>Steps I am completing for any employer who offers sponsorship. This list is updated as each step is done.</p>
+    <!-- To update: change class="todo" to class="doing" or class="done", change the state text, and set the meter width (25% per step done). -->
+    <div class="meter" role="img" aria-label="0 of 4 steps done"><i style="width:0%"></i></div>
+    <ol class="tracker">
+      <li class="doing"><span class="tick" aria-hidden="true"></span>Pass the IELTS level the visa needs<span class="state">Studying now</span></li>
+      <li class="todo"><span class="tick" aria-hidden="true"></span>Renew my dangerous goods certificate<span class="state">Planned</span></li>
+      <li class="todo"><span class="tick" aria-hidden="true"></span>Convert my licence and pass the Australian heavy vehicle assessment<span class="state">On arrival</span></li>
+      <li class="todo"><span class="tick" aria-hidden="true"></span>Get a White Card, site tickets and the required medical<span class="state">On arrival</span></li>
     </ol>
+  </section>
+
+  <section aria-labelledby="docs-h">
+    <h2 id="docs-h">Documents I can send</h2>
+    <p class="lede">Available on request after first contact. I do not publish personal documents online.</p>
+    <ul class="docs">
+      <li><b>Driving licences</b><span>Class 1, 2, 3 and D1, official English translation being prepared</span></li>
+      <li><b>Employment records</b><span>Iranian social security work history</span></li>
+      <li><b>Training certificates</b><span>Dangerous goods, freight and passenger transport, mechanic</span></li>
+      <li><b>Passport</b><span>Valid passport for visa processing</span></li>
+    </ul>
   </section>
 
   <section aria-labelledby="contact-h">
