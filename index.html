@@ -2,360 +2,310 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mohsen Emamdadi Taromi | Heavy Vehicle Driver</title>
 <meta name="description" content="Heavy vehicle driver with over 20 years of professional driving, looking for employer sponsorship in regional Australia (NT and WA DAMA regions).">
+<meta name="theme-color" content="#0e1316">
 <meta property="og:title" content="Mohsen Emamdadi Taromi, Heavy Vehicle Driver">
 <meta property="og:description" content="20+ years of professional driving. Ready to relocate to regional Australia on an employer-sponsored visa.">
 <meta property="og:type" content="profile">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230b6b3a'/%3E%3Crect x='3' y='3' width='26' height='26' rx='3' fill='none' stroke='white' stroke-width='2'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='white' text-anchor='middle'%3EMT%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a7a45'/%3E%3Crect x='3' y='3' width='26' height='26' rx='4' fill='none' stroke='white' stroke-width='2'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='14' fill='white' text-anchor='middle'%3EMT%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800;900&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --page:#e9ebe6;        /* concrete */
-    --panel:#ffffff;
-    --ink:#23272b;         /* asphalt */
-    --soft:#5a6168;
-    --sign:#0b6b3a;        /* guide-sign green */
-    --sign-ink:#ffffff;
-    --line:#f2c230;        /* road-marking yellow */
-    --rule:#d3d6d0;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --page:#1a1d20; --panel:#23272b; --ink:#eef0ec; --soft:#a6adb3;
-      --sign:#0e7a43; --rule:#363b40;
-    }
-  }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--page);color:var(--ink);
-    font-family:"Overpass",system-ui,sans-serif;font-size:17px;line-height:1.6}
-  a{color:inherit}
-  :focus-visible{outline:3px solid var(--line);outline-offset:3px;border-radius:4px}
-  .wrap{max-width:960px;margin:0 auto;padding:0 16px}
-
-  /* ---------- Hero: a highway guide sign ---------- */
-  .hero{background:var(--ink);padding:56px 0 0;position:relative;overflow:hidden}
-  @media (prefers-color-scheme: dark){.hero{background:#121416}}
-  .hero::after{ /* the road's centre line */
-    content:"";display:block;height:6px;margin-top:56px;
-    background:repeating-linear-gradient(90deg,var(--line) 0 56px,transparent 56px 96px)}
-  .sign{
-    background:var(--sign);color:var(--sign-ink);border-radius:14px;
-    padding:10px;box-shadow:0 18px 40px rgba(0,0,0,.35);max-width:720px}
-  .sign-inner{border:3px solid var(--sign-ink);border-radius:9px;padding:28px 28px 26px}
-  .sign h1{font-weight:900;font-size:clamp(34px,7vw,60px);line-height:1.02;
-    letter-spacing:-.01em;margin:0}
-  .sign .role{font-size:clamp(19px,3vw,24px);font-weight:600;margin:12px 0 0}
-  .dests{list-style:none;margin:26px 0 0;padding:20px 0 0;border-top:3px solid var(--sign-ink);
-    display:grid;gap:10px}
-  .dests li{display:flex;align-items:center;gap:14px;font-size:clamp(18px,2.6vw,22px);font-weight:800}
-  .dests svg{flex:none;width:30px;height:30px}
-  .dests small{font-weight:400;font-size:15px;opacity:.85;margin-left:auto;text-align:right}
-
-  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:8px;
-    font-weight:800;font-size:16px;text-decoration:none}
-  .btn-main{background:var(--line);color:#23272b}
-  .btn-alt{color:#fff;border:2px solid rgba(255,255,255,.55)}
-  .btn-alt:hover{border-color:#fff}
-  .btn-main:hover{filter:brightness(1.06)}
-
-  /* ---------- Body ---------- */
-  main.wrap{padding-top:56px;padding-bottom:24px}
-  h2{font-size:28px;font-weight:900;margin:0 0 6px;letter-spacing:-.005em}
-  .lede{color:var(--soft);margin:0 0 26px;max-width:62ch}
-  section{margin-bottom:56px}
-
-  .about{display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:start}
-  .about p{margin:0 0 14px;max-width:62ch}
-  .facts{display:grid;gap:12px}
-  .fact{background:var(--panel);border-left:6px solid var(--sign);border-radius:6px;padding:14px 18px}
-  .fact b{display:block;font-size:26px;font-weight:900;line-height:1.1}
-  .fact span{color:var(--soft);font-size:15px}
-
-  /* Timeline drawn as a road */
-  .road{position:relative;padding-left:44px}
-  .road::before{content:"";position:absolute;left:12px;top:6px;bottom:6px;width:10px;
-    background:var(--ink);border-radius:5px}
-  .road::after{content:"";position:absolute;left:16px;top:14px;bottom:14px;width:2px;
-    background:repeating-linear-gradient(180deg,var(--line) 0 14px,transparent 14px 24px)}
-  @media (prefers-color-scheme: dark){.road::before{background:#0f1113}}
-  .stop{position:relative;background:var(--panel);border-radius:8px;padding:20px 22px;margin-bottom:16px}
-  .stop:last-child{margin-bottom:0}
-  .stop::before{content:"";position:absolute;left:-38px;top:24px;width:18px;height:18px;
-    border-radius:50%;background:var(--sign);border:3px solid var(--page)}
-  .stop .years{font-weight:800;color:var(--sign);font-size:15px}
-  @media (prefers-color-scheme: dark){.stop .years{color:#4fc488}}
-  .stop h3{margin:2px 0 2px;font-size:21px;font-weight:800;line-height:1.25}
-  .stop .where{color:var(--soft);font-size:15px}
-  .stop ul{margin:10px 0 0;padding-left:20px}
-  .stop li{margin:3px 0}
-
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .card{background:var(--panel);border-radius:8px;padding:22px 24px}
-  .card h3{margin:0 0 10px;font-size:19px;font-weight:800}
-  .card ul{margin:0;padding-left:20px}
-  .card li{margin:6px 0}
-  .muted{color:var(--soft)}
-
-  .skills{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
-  .skills li{background:var(--panel);border:2px solid var(--rule);border-radius:6px;
-    padding:6px 14px;font-weight:600;font-size:15px}
-
-  .plan{background:var(--sign);color:#fff;border-radius:12px;padding:28px}
-  .plan h2{color:#fff}
-  .plan ol{margin:14px 0 0;padding-left:22px}
-  .plan li{margin:8px 0;padding-left:4px}
-  .plan p{margin:0;opacity:.9;max-width:62ch}
-
-  .contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
-  .contact a{background:var(--panel);text-decoration:none;border-radius:8px;padding:16px 20px;
-    border:2px solid var(--rule);min-width:240px;flex:1}
-  .contact a:hover{border-color:var(--sign)}
-  .contact b{display:block;font-size:14px;color:var(--soft);font-weight:600}
-  .contact span{font-size:18px;font-weight:800;word-break:break-all}
-
-  footer{border-top:1px solid var(--rule);padding:22px 0 36px;color:var(--soft);font-size:15px}
-  footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
-  footer a{color:var(--ink);font-weight:700}
-
-
-  /* Top nav */
-  .topnav{display:flex;justify-content:flex-end;gap:18px;margin:-30px 0 22px;font-weight:700;font-size:15px}
-  .topnav a{color:#fff;text-decoration:none;opacity:.85}
-  .topnav a:hover{opacity:1;text-decoration:underline}
-
-  /* Route comparison */
-  .routes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .country{background:var(--panel);border-radius:8px;padding:22px 24px}
-  .country h3{margin:0 0 14px;font-size:19px;font-weight:800}
-  .leg{margin:0 0 14px}
-  .leg:last-child{margin-bottom:0}
-  .leg-name{display:flex;justify-content:space-between;gap:12px;font-weight:600;font-size:15px}
-  .leg-name span{color:var(--soft);font-weight:400;white-space:nowrap}
-  .bar{height:12px;border-radius:6px;background:var(--rule);margin-top:6px;position:relative;overflow:hidden}
-  .bar i{position:absolute;inset:0 auto 0 0;border-radius:6px;
-    background:repeating-linear-gradient(90deg,var(--ink) 0 18px,#3a4046 18px 22px)}
-  .country.au .bar i{background:repeating-linear-gradient(90deg,var(--sign) 0 18px,#0f8048 18px 22px)}
-  @media (prefers-color-scheme: dark){.bar i{background:repeating-linear-gradient(90deg,#c9cdd1 0 18px,#9aa0a6 18px 22px)}}
-  .climate{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
-  .climate div{background:var(--panel);border-radius:8px;padding:16px 18px}
-  .climate b{display:block;font-size:17px;font-weight:800;margin-bottom:4px}
-  .climate p{margin:0;color:var(--soft);font-size:15px}
-  .fine{font-size:14px;color:var(--soft);margin-top:12px}
-
-  /* Readiness tracker */
-  .tracker{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
-  .tracker li{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.08);
-    border:2px solid rgba(255,255,255,.25);border-radius:8px;padding:12px 16px}
-  .tracker .tick{flex:none;width:26px;height:26px;border-radius:50%;border:3px solid #fff;
-    display:grid;place-items:center}
-  .tracker .state{margin-left:auto;font-size:14px;font-weight:700;opacity:.85;white-space:nowrap}
-  .tracker li.done{background:#fff;color:var(--sign);border-color:#fff}
-  .tracker li.done .tick{background:var(--sign);border-color:var(--sign)}
-  .tracker li.done .tick::after{content:"";width:10px;height:6px;border:solid #fff;border-width:0 0 3px 3px;
-    transform:translateY(-1px) rotate(-45deg)}
-  .tracker li.doing .tick{border-color:var(--line);border-style:dashed}
-  .meter{height:10px;background:rgba(255,255,255,.2);border-radius:5px;margin-top:18px;overflow:hidden}
-  .meter i{display:block;height:100%;background:var(--line);border-radius:5px}
-
-  .docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;list-style:none;padding:0;margin:0}
-  .docs li{background:var(--panel);border-radius:8px;padding:14px 18px;border-left:6px solid var(--line)}
-  .docs b{display:block}
-  .docs span{color:var(--soft);font-size:15px}
-
-  @media (max-width:720px){
-    .routes{grid-template-columns:1fr}
-    .climate{grid-template-columns:1fr}
-    .topnav{margin:0 0 18px;justify-content:flex-start}
-  }
-
-  @media (max-width:720px){
-    .about,.two{grid-template-columns:1fr}
-    .sign-inner{padding:22px 18px}
-    .dests small{display:none}
-    .hero{padding-top:28px}
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Overpass:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header class="hero">
+<nav class="nav" aria-label="Site">
   <div class="wrap">
-    <nav class="topnav" aria-label="Site">
-      <a href="employers.html">For employers</a>
-      <a href="Mohsen_Emamdadi_Taromi_CV.pdf" download>Download CV (PDF)</a>
-    </nav>
-    <div class="sign" role="img" aria-label="Highway sign showing Mohsen's name and the regions he wants to work in">
-      <div class="sign-inner">
-        <h1>Mohsen Emamdadi Taromi</h1>
-        <p class="role">Heavy vehicle driver, 20+ years on the road</p>
-        <ul class="dests">
-          <li>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Northern Territory <small>NT DAMA</small>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Western Australia <small>Goldfields and WA DAMA</small>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V7M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Any regional employer who sponsors drivers
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="hero-actions">
-      <a class="btn btn-main" href="mailto:mohsen.taromi.d@gmail.com?subject=Heavy%20vehicle%20driver%20-%20Mohsen%20Emamdadi%20Taromi">Email Mohsen</a>
-      <a class="btn btn-alt" href="tel:+989171598828">Call +98 917 159 8828</a>
-      <a class="btn btn-alt" href="Mohsen_Emamdadi_Taromi_CV.pdf" download>Download CV</a>
+    <a class="brand" href="#top"><i aria-hidden="true"></i>Mohsen Taromi</a>
+    <a class="link" href="#journey">Journey</a>
+    <a class="link" href="#history">Experience</a>
+    <a class="link" href="employers.html">For employers</a>
+    <a class="btn btn-amber btn-sm" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="sky" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="scene" aria-hidden="true"><div class="plane"></div></div>
+
+  <div class="wrap">
+    <div class="hero-top">
+      <span class="who">Heavy vehicle driver profile</span>
+      <nav aria-label="Quick links">
+        <a href="employers.html">For employers</a>
+        <a href="Mohsen_Emamdadi_Taromi_CV.pdf" download>Download CV</a>
+      </nav>
     </div>
   </div>
+
+  <div class="wrap hero-body">
+    <div>
+      <p class="kicker ld"><b aria-hidden="true"></b>Open to sponsorship in regional Australia</p>
+      <h1 class="ld"><span>Mohsen</span><span>Emamdadi</span><span>Taromi</span></h1>
+      <p class="sub ld">A heavy vehicle driver with more than 20 years on long, hot, remote roads, ready to drive for you in the NT or WA.</p>
+      <div class="actions ld">
+        <a class="btn btn-amber" href="mailto:mohsen.taromi.d@gmail.com?subject=Heavy%20vehicle%20driver%20-%20Mohsen%20Emamdadi%20Taromi">Email Mohsen</a>
+        <a class="btn btn-ghost" href="Mohsen_Emamdadi_Taromi_CV.pdf" download>Download CV</a>
+      </div>
+    </div>
+
+    <div class="sign" role="img" aria-label="Highway sign: Northern Territory, Western Australia, any regional employer who sponsors drivers">
+      <div class="sign-in">
+        <h2>Heading for</h2>
+        <div class="dest">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Northern Territory <small>NT DAMA</small>
+        </div>
+        <div class="dest">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H7M12 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Western Australia <small>WA DAMA</small>
+        </div>
+        <div class="dest">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V7M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Any regional sponsor
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">Scroll<i></i></div>
 </header>
 
-<main class="wrap">
+<section class="stats" aria-label="Key numbers">
+  <div class="wrap">
+    <div class="stat"><b data-count="20" data-suffix="+">20+</b><span>years of professional driving</span></div>
+    <div class="stat"><b data-count="1997" data-from="1960">1997</b><span>Class 1 heavy licence since</span></div>
+    <div class="stat"><b data-count="1999" data-from="1960">1999</b><span>first commercial driving job</span></div>
+    <div class="stat"><b data-count="5">5</b><span>licence classes held</span></div>
+  </div>
+</section>
 
-  <section class="about" aria-labelledby="about-h">
-    <div>
-      <h2 id="about-h">About</h2>
-      <p>I have driven professionally for more than 20 years: long-haul freight across Iran, food and construction materials, general cargo, and ambulance and patient transport for a hospital. I have held an Iranian Class 1 heavy vehicle licence since 1997 and my driving record is clean.</p>
-      <p>I am also a certified petrol engine mechanic, so I do my own pre-trip checks and can sort out basic faults on the road.</p>
-      <p>I am looking for an employer in a DAMA region, or with a labour agreement, who can sponsor a truck driver. I am ready to move to regional Australia for the long term, and I am comfortable with remote and isolated work.</p>
-    </div>
-    <div class="facts">
-      <div class="fact"><b>20+ years</b><span>professional driving</span></div>
-      <div class="fact"><b>Class 1 since 1997</b><span>heavy goods vehicles over 6 tonnes</span></div>
-      <div class="fact"><b>Clean record</b><span>driving record</span></div>
-      <div class="fact"><b>Mechanic</b><span>vocational certificate, petrol engines</span></div>
+<main id="main">
+
+  <section class="sec" aria-labelledby="about-h">
+    <div class="wrap about">
+      <div class="rv">
+        <div class="sec-head" style="margin-bottom:22px"><h2 id="about-h">About Mohsen</h2></div>
+        <p class="lead">More than 20 years behind the wheel: long-haul freight across Iran, food and building materials, and ambulance work for a hospital.</p>
+        <p>He has held an Iranian Class 1 heavy vehicle licence since 1997 and his driving record is clean. He is also a trained petrol engine mechanic, so he does his own pre-trip checks and can fix basic faults on the road.</p>
+        <p>He is looking for an employer in a DAMA region, or with a labour agreement, who can sponsor a truck driver, and he wants to move to regional Australia for the long term.</p>
+      </div>
+      <div class="traits rv">
+        <div class="trait">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+          <div><b>Used to extreme heat</b><span>Years based in Bandar Abbas, where summers pass 40 °C.</span></div>
+        </div>
+        <div class="trait">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 10 5M20 19 14 5M12 7v2M12 12v2M12 17v2"/></svg>
+          <div><b>Long, remote roads</b><span>Long-haul runs through desert country with few towns.</span></div>
+        </div>
+        <div class="trait">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
+          <div><b>Fixes his own truck</b><span>Certified mechanic for checks and basic roadside repairs.</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <section class="journey" id="journey" aria-labelledby="journey-h">
+    <div class="journey-stick">
+      <div class="wrap">
+        <div class="sec-head" style="margin-bottom:10px">
+          <h2 id="journey-h">From Shiraz to the Australian outback</h2>
+          <p>Keep scrolling to follow the road.</p>
+        </div>
+        <div class="jmap">
+          <svg viewBox="0 0 1000 470" role="img" aria-label="Route from Shiraz and Bandar Abbas in Iran to Darwin and Kalgoorlie in Australia">
+            <text class="region-lbl" x="40" y="58">Iran</text>
+            <text class="region-lbl" x="985" y="340" text-anchor="end">Australia</text>
+            <path class="sea" d="M300 300 C 380 360 460 360 540 330 M340 340 C 420 400 500 400 580 370"/>
+            <path class="jpath-bg" d="M150 110 L250 200 C 400 320 560 120 760 210 C 790 290 700 360 600 410"/>
+            <path class="jpath" d="M150 110 L250 200 C 400 320 560 120 760 210 C 790 290 700 360 600 410"/>
 
-  <section aria-labelledby="routes-h">
-    <h2 id="routes-h">From Bandar Abbas to Darwin</h2>
-    <p class="lede">The roads I know already look a lot like the work in northern and western Australia: long distances between towns, desert country and serious heat.</p>
-    <div class="routes">
-      <div class="country">
-        <h3>Long-haul in Iran</h3>
-        <div class="leg"><div class="leg-name">Bandar Abbas to Tehran <span>about 1,300 km</span></div><div class="bar"><i style="width:87%"></i></div></div>
-        <div class="leg"><div class="leg-name">Bandar Abbas to Shiraz <span>about 600 km</span></div><div class="bar"><i style="width:40%"></i></div></div>
-        <div class="leg"><div class="leg-name">Shiraz to Tehran <span>about 930 km</span></div><div class="bar"><i style="width:62%"></i></div></div>
+            <circle class="stop-dot" data-at="0" cx="150" cy="110" r="11"/>
+            <text class="stop-lbl" data-at="0" x="175" y="104">Shiraz</text>
+            <text class="stop-sub" data-at="0" x="175" y="128">home today</text>
+
+            <circle class="stop-dot" data-at="0.14" cx="250" cy="200" r="11"/>
+            <text class="stop-lbl" data-at="0.14" x="275" y="196">Bandar Abbas</text>
+            <text class="stop-sub" data-at="0.14" x="275" y="220">years of work</text>
+
+            <circle class="stop-dot" data-at="0.7" cx="760" cy="210" r="11"/>
+            <text class="stop-lbl" data-at="0.7" x="785" y="200">Darwin, NT</text>
+            <text class="stop-sub" data-at="0.7" x="785" y="224">NT DAMA</text>
+
+            <circle class="stop-dot" data-at="1" cx="600" cy="410" r="11"/>
+            <text class="stop-lbl" data-at="1" x="575" y="404" text-anchor="end">Kalgoorlie, WA</text>
+            <text class="stop-sub" data-at="1" x="575" y="428" text-anchor="end">Goldfields DAMA</text>
+
+            <g class="truck" transform="translate(150 110)">
+              <g transform="translate(-30 -40)">
+                <rect x="0" y="8" width="38" height="26" rx="3" fill="#eef1ec"/>
+                <rect x="40" y="14" width="20" height="20" rx="3" fill="#ffb321"/>
+                <rect x="46" y="17" width="10" height="8" rx="1.5" fill="#0e1316"/>
+                <circle cx="10" cy="36" r="5" fill="#0e1316" stroke="#eef1ec" stroke-width="2"/>
+                <circle cx="28" cy="36" r="5" fill="#0e1316" stroke="#eef1ec" stroke-width="2"/>
+                <circle cx="52" cy="36" r="5" fill="#0e1316" stroke="#eef1ec" stroke-width="2"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="captions" aria-live="polite">
+          <div class="cap on" data-from="0"><b>Shiraz</b><p>Where Mohsen lives today, ready to relocate as soon as a sponsor is found.</p></div>
+          <div class="cap" data-from="0.14"><b>Bandar Abbas</b><p>Years of driving in Persian Gulf heat and humidity, much like the Top End build-up.</p></div>
+          <div class="cap" data-from="0.7"><b>Darwin and the NT</b><p>The NT DAMA can allow an age concession and a lower English level for eligible occupations.</p></div>
+          <div class="cap" data-from="0.98"><b>Kalgoorlie and WA</b><p>The Goldfields and the statewide WA DAMA list truck drivers too.</p></div>
+        </div>
       </div>
-      <div class="country au">
-        <h3>Similar runs in Australia</h3>
-        <div class="leg"><div class="leg-name">Darwin to Alice Springs <span>about 1,500 km</span></div><div class="bar"><i style="width:100%"></i></div></div>
-        <div class="leg"><div class="leg-name">Perth to Kalgoorlie <span>about 600 km</span></div><div class="bar"><i style="width:40%"></i></div></div>
-        <div class="leg"><div class="leg-name">Darwin to Katherine <span>about 320 km</span></div><div class="bar"><i style="width:21%"></i></div></div>
-      </div>
+      <div class="jprogress" aria-hidden="true"><i></i></div>
     </div>
-    <div class="climate">
-      <div><b>Heat and humidity</b><p>I worked for years out of Bandar Abbas on the Persian Gulf, where summer days pass 40 °C with heavy humidity, much like the Top End build-up.</p></div>
-      <div><b>Desert roads</b><p>Long stretches through southern Iran with few towns, fuel stops planned in advance and no help close by.</p></div>
-      <div><b>Fixing it myself</b><p>As a trained mechanic I can deal with basic faults on remote roads instead of waiting hours for help.</p></div>
-    </div>
-    <p class="fine">Distances are approximate road distances.</p>
   </section>
 
-  <section aria-labelledby="exp-h">
-    <h2 id="exp-h">Work history</h2>
-    <p class="lede">Employment is documented in Iranian social security records.</p>
-    <div class="road">
-      <article class="stop">
-        <div class="years">2008 to now</div>
-        <h3>Self-employed professional driver</h3>
-        <div class="where">Iran, nationwide</div>
-        <ul>
-          <li>Long-haul transport of general cargo, construction materials and food</li>
-          <li>Load securing, restraint and weight distribution</li>
-          <li>Pre-trip checks, maintenance and basic mechanical repairs</li>
-          <li>Route planning and road safety compliance</li>
+  <section class="sec" aria-labelledby="dist-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2 id="dist-h">Distances he already drives</h2>
+        <p>Long-haul runs in Iran are the same scale as the work in northern and western Australia.</p>
+      </div>
+      <div class="compare">
+        <div class="cbox">
+          <h3>Long-haul in Iran</h3>
+          <div class="leg"><div class="leg-top">Bandar Abbas to Tehran <span>about 1,300 km</span></div><div class="track"><i style="--w:87%"></i></div></div>
+          <div class="leg"><div class="leg-top">Shiraz to Tehran <span>about 930 km</span></div><div class="track"><i style="--w:62%"></i></div></div>
+          <div class="leg"><div class="leg-top">Bandar Abbas to Shiraz <span>about 600 km</span></div><div class="track"><i style="--w:40%"></i></div></div>
+        </div>
+        <div class="cbox au">
+          <h3>Similar runs in Australia</h3>
+          <div class="leg"><div class="leg-top">Darwin to Alice Springs <span>about 1,500 km</span></div><div class="track"><i style="--w:100%"></i></div></div>
+          <div class="leg"><div class="leg-top">Perth to Kalgoorlie <span>about 600 km</span></div><div class="track"><i style="--w:40%"></i></div></div>
+          <div class="leg"><div class="leg-top">Darwin to Katherine <span>about 320 km</span></div><div class="track"><i style="--w:21%"></i></div></div>
+        </div>
+      </div>
+      <p class="fine">Approximate road distances.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="history" aria-labelledby="hist-h" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2 id="hist-h">Work history</h2>
+        <p>Documented in Iranian social security records.</p>
+      </div>
+      <div class="history">
+        <div class="rail" aria-hidden="true"><i></i></div>
+        <article class="job">
+          <div class="yrs">2008 to now</div>
+          <h3>Self-employed professional driver</h3>
+          <div class="where">Iran, nationwide</div>
+          <ul>
+            <li>Long-haul transport of general cargo, construction materials and food</li>
+            <li>Load securing, restraint and weight distribution</li>
+            <li>Pre-trip checks, maintenance and basic mechanical repairs</li>
+            <li>Route planning and road safety compliance</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="yrs">2003 to 2006</div>
+          <h3>Ambulance and patient transport driver</h3>
+          <div class="where">Sahib al-Zaman Hospital, Bandar Abbas</div>
+          <ul><li>Safe and urgent transport of patients and medical equipment</li></ul>
+        </article>
+        <article class="job">
+          <div class="yrs">1999 to 2001</div>
+          <h3>Commercial driver, freight and passengers</h3>
+          <div class="where">Tarigh-e Qods Company, Bandar Abbas</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="cred-h" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head rv"><h2 id="cred-h">Licences, training and skills</h2></div>
+      <div class="creds">
+        <div class="cred">
+          <h3>Licences</h3>
+          <ul>
+            <li>Class 1, heavy goods over 6 tonnes (1997)</li>
+            <li>Class 2, Class 3 and motorcycle (1997)</li>
+            <li>Minibus and bus, restricted D1 (2018)</li>
+          </ul>
+          <p class="note">Australian HR / HC assessment to be completed on arrival.</p>
+        </div>
+        <div class="cred">
+          <h3>Training</h3>
+          <ul>
+            <li>Dangerous goods transport (ADR), will renew</li>
+            <li>Freight transport service training, will renew</li>
+            <li>Passenger transport and road safety refresher (2013)</li>
+            <li>Petrol engine mechanic certificate (2007)</li>
+          </ul>
+        </div>
+        <div class="cred">
+          <h3>Skills and languages</h3>
+          <ul class="chips">
+            <li>Load securing</li><li>Pre-trip inspections</li><li>Basic repairs</li>
+            <li>Dangerous goods awareness</li><li>Road safety</li><li>First aid</li><li>Remote work</li>
+          </ul>
+          <p class="note">Persian (native), English (basic, studying for IELTS), Turkish (beginner).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="ready-h" style="padding-top:20px">
+    <div class="wrap">
+      <div class="ready rv">
+        <h2 id="ready-h">Getting ready to start work</h2>
+        <p>The steps Mohsen is completing for any employer who offers sponsorship. Updated as each one is done.</p>
+        <!-- To update: set a step's class to "done", "doing" or "todo", edit its text, and set --w on the bar (25% per finished step). -->
+        <div class="meter"><span>0 of 4 done</span><div class="bar"><i style="--w:4%"></i></div></div>
+        <ul class="steps">
+          <li class="doing"><span class="dot" aria-hidden="true"></span><span class="txt"><b>IELTS for the visa</b><span>Studying now</span></span></li>
+          <li class="todo"><span class="dot" aria-hidden="true"></span><span class="txt"><b>Renew dangerous goods certificate</b><span>Planned</span></span></li>
+          <li class="todo"><span class="dot" aria-hidden="true"></span><span class="txt"><b>Australian licence and heavy vehicle assessment</b><span>On arrival</span></span></li>
+          <li class="todo"><span class="dot" aria-hidden="true"></span><span class="txt"><b>White Card, site tickets and medical</b><span>On arrival</span></span></li>
         </ul>
-      </article>
-      <article class="stop">
-        <div class="years">2003 to 2006</div>
-        <h3>Ambulance and patient transport driver</h3>
-        <div class="where">Sahib al-Zaman Hospital, Bandar Abbas</div>
-        <ul><li>Safe and urgent transport of patients and medical equipment</li></ul>
-      </article>
-      <article class="stop">
-        <div class="years">1999 to 2001</div>
-        <h3>Commercial driver, freight and passengers</h3>
-        <div class="where">Tarigh-e Qods Company, Bandar Abbas</div>
-      </article>
+      </div>
     </div>
   </section>
 
-  <section class="two" aria-label="Licences and training">
-    <div class="card">
-      <h3>Licences</h3>
-      <ul>
-        <li>Iranian Class 1, heavy goods over 6 tonnes (1997)</li>
-        <li>Class 2, Class 3 and motorcycle (1997)</li>
-        <li>Minibus and bus, restricted D1 (2018)</li>
+  <section class="sec" aria-labelledby="docs-h" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2 id="docs-h">Documents he can send</h2>
+        <p>Available on request after first contact. Personal documents are never published online.</p>
+      </div>
+      <ul class="docs">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2"/><path d="M14 10h4M14 14h4"/></svg><b>Driving licences</b><span>Class 1, 2, 3 and D1, official English translation being prepared</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M9 10h6M9 14h6M9 18h4"/></svg><b>Employment records</b><span>Iranian social security work history</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 21l4-2 4 2-1-7.5"/></svg><b>Training certificates</b><span>Dangerous goods, transport training, mechanic</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 17h6"/></svg><b>Passport</b><span>Valid passport for visa processing</span></li>
       </ul>
-      <p class="muted">Australian HR / HC assessment to be completed on arrival.</p>
-    </div>
-    <div class="card">
-      <h3>Training</h3>
-      <ul>
-        <li>Dangerous goods transport (ADR), will renew</li>
-        <li>Freight transport service training, will renew</li>
-        <li>Passenger transport training and road safety refresher (2013)</li>
-        <li>Petrol engine mechanic certificate (2007)</li>
-      </ul>
-    </div>
-  </section>
-
-  <section aria-labelledby="skills-h">
-    <h2 id="skills-h">Skills</h2>
-    <p class="lede">Persian (native), English (basic, studying for IELTS), Turkish (beginner).</p>
-    <ul class="skills">
-      <li>Heavy vehicle driving</li><li>Long-haul freight</li><li>Load securing</li>
-      <li>Pre-trip inspections</li><li>Basic mechanical repairs</li>
-      <li>Dangerous goods awareness</li><li>Road safety compliance</li>
-      <li>Remote and isolated work</li><li>First aid and emergency response</li>
-    </ul>
-  </section>
-
-  <section class="plan" aria-labelledby="plan-h">
-    <h2 id="plan-h">Getting ready to start work</h2>
-    <p>Steps I am completing for any employer who offers sponsorship. This list is updated as each step is done.</p>
-    <!-- To update: change class="todo" to class="doing" or class="done", change the state text, and set the meter width (25% per step done). -->
-    <div class="meter" role="img" aria-label="0 of 4 steps done"><i style="width:0%"></i></div>
-    <ol class="tracker">
-      <li class="doing"><span class="tick" aria-hidden="true"></span>Pass the IELTS level the visa needs<span class="state">Studying now</span></li>
-      <li class="todo"><span class="tick" aria-hidden="true"></span>Renew my dangerous goods certificate<span class="state">Planned</span></li>
-      <li class="todo"><span class="tick" aria-hidden="true"></span>Convert my licence and pass the Australian heavy vehicle assessment<span class="state">On arrival</span></li>
-      <li class="todo"><span class="tick" aria-hidden="true"></span>Get a White Card, site tickets and the required medical<span class="state">On arrival</span></li>
-    </ol>
-  </section>
-
-  <section aria-labelledby="docs-h">
-    <h2 id="docs-h">Documents I can send</h2>
-    <p class="lede">Available on request after first contact. I do not publish personal documents online.</p>
-    <ul class="docs">
-      <li><b>Driving licences</b><span>Class 1, 2, 3 and D1, official English translation being prepared</span></li>
-      <li><b>Employment records</b><span>Iranian social security work history</span></li>
-      <li><b>Training certificates</b><span>Dangerous goods, freight and passenger transport, mechanic</span></li>
-      <li><b>Passport</b><span>Valid passport for visa processing</span></li>
-    </ul>
-  </section>
-
-  <section aria-labelledby="contact-h">
-    <h2 id="contact-h">Contact</h2>
-    <p class="lede">I can do an online interview at any time and send licence documents and employment records on request. Referees are available.</p>
-    <div class="contact">
-      <a href="mailto:mohsen.taromi.d@gmail.com"><b>Email</b><span>mohsen.taromi.d@gmail.com</span></a>
-      <a href="tel:+989171598828"><b>Phone</b><span>+98 917 159 8828</span></a>
     </div>
   </section>
 
 </main>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 id="contact-h" class="rv">Need a driver? Let's talk.</h2>
+    <p>Mohsen can do an online interview at any time and send his documents on request. Referees are available.</p>
+    <div class="cgrid">
+      <a href="mailto:mohsen.taromi.d@gmail.com?subject=Heavy%20vehicle%20driver%20-%20Mohsen%20Emamdadi%20Taromi"><small>Email</small><span>mohsen.taromi.d@gmail.com</span></a>
+      <a href="tel:+989171598828"><small>Phone</small><span>+98 917 159 8828</span></a>
+      <a href="employers.html"><small>For employers</small><span>How DAMA sponsorship works</span></a>
+      <a href="Mohsen_Emamdadi_Taromi_CV.pdf" download><small>One-page CV</small><span>Download PDF</span></a>
+    </div>
+  </div>
+  <div class="road-end" aria-hidden="true"></div>
+</section>
 
 <footer>
   <div class="wrap">
@@ -363,6 +313,11 @@
     <span>Website made by <a href="https://sentinelweb.ir/en/mahdi-taromi" target="_blank" rel="noopener">Mahdi Taromi</a></span>
   </div>
 </footer>
+
+<div class="mbar" aria-label="Quick contact">
+  <a class="btn btn-amber" href="mailto:mohsen.taromi.d@gmail.com">Email</a>
+  <a class="btn btn-ghost" href="tel:+989171598828">Call</a>
+</div>
 
 </body>
 </html>
