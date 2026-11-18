@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mohsen.taromi.net/sitemap.xml
