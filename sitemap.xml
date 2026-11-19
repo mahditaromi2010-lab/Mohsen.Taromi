@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://mohsen.taromi.net/</loc><xhtml:link rel="alternate" hreflang="en" href="https://mohsen.taromi.net/"/><xhtml:link rel="alternate" hreflang="fa" href="https://mohsen.taromi.net/fa/"/></url>
-  <url><loc>https://mohsen.taromi.net/employers.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://mohsen.taromi.net/employers.html"/><xhtml:link rel="alternate" hreflang="fa" href="https://mohsen.taromi.net/fa/employers.html"/></url>
-  <url><loc>https://mohsen.taromi.net/fa/</loc><xhtml:link rel="alternate" hreflang="en" href="https://mohsen.taromi.net/"/><xhtml:link rel="alternate" hreflang="fa" href="https://mohsen.taromi.net/fa/"/></url>
-  <url><loc>https://mohsen.taromi.net/fa/employers.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://mohsen.taromi.net/employers.html"/><xhtml:link rel="alternate" hreflang="fa" href="https://mohsen.taromi.net/fa/employers.html"/></url>
+  <url><loc>https://mohsen.taromi.net/</loc><lastmod>2026-11-19</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://mohsen.taromi.net/"/><xhtml:link rel="alternate" hreflang="fa" href="https://mohsen.taromi.net/fa/"/></url>
+  <url><loc>https://mohsen.taromi.net/employers.html</loc><lastmod>2026-11-19</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://mohsen.taromi.net/employers.html"/><xhtml:link rel="alternate" hreflang="fa" href="https://mohsen.taromi.net/fa/employers.html"/></url>
+  <url><loc>https://mohsen.taromi.net/fa/</loc><lastmod>2026-11-19</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://mohsen.taromi.net/"/><xhtml:link rel="alternate" hreflang="fa" href="https://mohsen.taromi.net/fa/"/></url>
+  <url><loc>https://mohsen.taromi.net/fa/employers.html</loc><lastmod>2026-11-19</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://mohsen.taromi.net/employers.html"/><xhtml:link rel="alternate" hreflang="fa" href="https://mohsen.taromi.net/fa/employers.html"/></url>
 </urlset>
